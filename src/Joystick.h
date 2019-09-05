@@ -27,6 +27,7 @@ class Joystick
 		bool getbuttonValue();
 		int getLowLimit();
 		int getHighLimit();
+		int getNoActionLimit();
 		String toString();
 		void toSerial();
 };

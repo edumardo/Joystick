@@ -59,6 +59,11 @@ int Joystick::getHighLimit()
     return m_joystickHighLimit ;
 }
 
+int Joystick::getNoActionLimit()
+{
+    return m_noActionLimit;
+}
+
 String Joystick::toString()
 {
 	String str = "";

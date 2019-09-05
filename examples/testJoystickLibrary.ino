@@ -16,7 +16,7 @@ void loop()
 	bool buttonValue = joystick.readButtonValue();
 	int lowLimit = joystick.getLowLimit();
 	int highLimit = joystick.getHighLimit();
-	String status = " | status: ";
+	String status = " | noActionLimit: " + (String)joystick.getNoActionLimit() + " | status: ";
 
 	// Turn left
 	if (XValue < lowLimit)
