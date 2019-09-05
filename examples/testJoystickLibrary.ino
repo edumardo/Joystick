@@ -2,7 +2,11 @@
 #include <Joystick.h>
 
 const int serialDelay = 200;
-Joystick joystick(A0, A1, 5, 100);
+int pinJoystickX = A0;
+int pinJoystickY = A1;
+int pinJoystickButton = 5;
+int noActionLimit = 100;
+Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit);
 
 void setup()
 {
