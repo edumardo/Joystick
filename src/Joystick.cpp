@@ -21,33 +21,21 @@ Joystick::Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoysti
 
 int Joystick::getXValue()
 {
+    m_XValue = analogRead(m_pinJoystickX);
     return m_XValue;
 }
 
 int Joystick::getYValue()
 {
-    return m_YValue;
-}
-
-int Joystick::readXValue()
-{
-    m_XValue = analogRead(m_pinJoystickX);
-    return m_XValue;
-}
-
-int Joystick::readYValue()
-{
     m_YValue = analogRead(m_pinJoystickY);
     return m_YValue;
 }
 
-bool Joystick::readButtonValue()
+bool Joystick::getbuttonValue()
 {
     m_buttonValue = digitalRead(m_pinJoystickButton);
     return m_buttonValue;
 }
-
-bool Joystick::getbuttonValue(){ return m_buttonValue;}
 
 int Joystick::getLowLimit()
 {

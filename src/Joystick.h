@@ -21,9 +21,6 @@ class Joystick
 		Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoystickButton, int noActionLimit);
 		int getXValue();
 		int getYValue();
-		int readXValue();
-		int readYValue();
-		bool readButtonValue();
 		bool getbuttonValue();
 		int getLowLimit();
 		int getHighLimit();
