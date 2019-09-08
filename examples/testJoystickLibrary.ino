@@ -52,6 +52,12 @@ void loop()
 		status += " idle ";
 	}
 
+	// button (false when pushed)
+	if (buttonValue != true)
+	{
+		status += " pushed";
+	}
+
 	Serial.println(joystick.toString() + status);
 	delay(serialDelay);
 }
