@@ -15,9 +15,9 @@ void setup()
 
 void loop()
 {
-	int XValue = joystick.readXValue();
-	int YValue = joystick.readYValue();
-	bool buttonValue = joystick.readButtonValue();
+	int YValue = joystick.getYValue();
+	int XValue = joystick.getXValue();
+	bool buttonValue = joystick.getbuttonValue();
 	int lowLimit = joystick.getLowLimit();
 	int highLimit = joystick.getHighLimit();
 	String status = " | noActionLimit: " + (String)joystick.getNoActionLimit() + " | status: ";
