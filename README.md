@@ -31,18 +31,18 @@ First, initialize a *Joystick* object with the propper pins and a no action limi
 Then, get the outputs of the joystick:
 
 ```
-	int YValue = joystick.getYValue();
-	int XValue = joystick.getXValue();
-	bool buttonValue = joystick.getbuttonValue();
+    int YValue = joystick.getYValue();
+    int XValue = joystick.getXValue();
+    bool buttonValue = joystick.getbuttonValue();
 ```
 
 Ultimatelty, do something, like control the direction:
 ```
-	// Turn left
-	if (XValue < lowLimit)
-	{
-		status += "turnLeft ";
-	}
+    // Turn left
+    if (XValue < lowLimit)
+    {
+        status += "turnLeft ";
+    }
 ```
 
 **NOTE:** with every invocation of the getters, you will read the joystick status.
