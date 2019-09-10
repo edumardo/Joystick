@@ -7,8 +7,8 @@ Joystick::Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoysti
     m_pinJoystickButton = pinJoystickButton;
 
     pinMode(m_pinJoystickButton, INPUT_PULLUP);
-	pinMode(m_pinJoystickX, INPUT);
-	pinMode(m_pinJoystickY, INPUT);
+    pinMode(m_pinJoystickX, INPUT);
+    pinMode(m_pinJoystickY, INPUT);
 
     m_XValue = 0;
     m_YValue = 0;
@@ -54,11 +54,11 @@ int Joystick::getNoActionLimit()
 
 String Joystick::toString()
 {
-	String str = "";
-	str = str + "X: ("+ m_joystickLowLimit + ") " + m_XValue + " (" + m_joystickHighLimit + ") | ";
+    String str = "";
+    str = str + "X: ("+ m_joystickLowLimit + ") " + m_XValue + " (" + m_joystickHighLimit + ") | ";
     str = str + "Y: ("+ m_joystickLowLimit + ") " + m_YValue + " (" + m_joystickHighLimit + ") | ";
     str = str + " button: " + m_buttonValue;
-	return str;
+    return str;
 }
 
 void Joystick::toSerial()
