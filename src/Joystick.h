@@ -5,27 +5,27 @@
 
 class Joystick
 {
-	private:
-		const int m_joystickRange = 512;
-		int m_joystickLowLimit;
-		int m_joystickHighLimit;
-		uint8_t m_pinJoystickButton;
-		uint8_t m_pinJoystickX;
-		uint8_t m_pinJoystickY;
-		int m_XValue;
-		int m_YValue;
-		bool m_buttonValue;
-		int m_noActionLimit;
+    private:
+        const int m_joystickRange = 512;
+        int m_joystickLowLimit;
+        int m_joystickHighLimit;
+        uint8_t m_pinJoystickButton;
+        uint8_t m_pinJoystickX;
+        uint8_t m_pinJoystickY;
+        int m_XValue;
+        int m_YValue;
+        bool m_buttonValue;
+        int m_noActionLimit;
 
-	public:
-		Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoystickButton, int noActionLimit);
-		int getXValue();
-		int getYValue();
-		bool getbuttonValue();
-		int getLowLimit();
-		int getHighLimit();
-		int getNoActionLimit();
-		String toString();
-		void toSerial();
+    public:
+        Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoystickButton, int noActionLimit);
+        int getXValue();
+        int getYValue();
+        bool getbuttonValue();
+        int getLowLimit();
+        int getHighLimit();
+        int getNoActionLimit();
+        String toString();
+        void toSerial();
 };
 #endif
