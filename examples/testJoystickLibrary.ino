@@ -4,8 +4,8 @@ const int serialDelay = 200;
 int pinJoystickX = A0;
 int pinJoystickY = A1;
 int pinJoystickButton = 5;
-int noActionLimit = 100;
-Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit);
+int noActionLimit = 25;
+Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit, 0, 255);
 
 void setup()
 {
