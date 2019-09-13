@@ -19,6 +19,8 @@ class Joystick
         int m_maxRange;
         bool m_buttonValue;
         int m_noActionLimit;
+        bool m_XAxisInverted;
+        bool m_YAxisInverted;
 
     public:
         Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoystickButton, int noActionLimit, int minRange, int maxRange);
@@ -28,6 +30,8 @@ class Joystick
         int getLowLimit();
         int getHighLimit();
         int getNoActionLimit();
+        void invertXAxis();
+        void invertYAxis();
         String toString();
         void toSerial();
 };
