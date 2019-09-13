@@ -12,7 +12,7 @@ or directly writing the include statement in your code:
 ```
 #include "Joystick.h"
 ```
-##Features
+## Features
 #### Mapping outputs
 A standar analog read is [0,1023]. In the constructor you set your preferences: [0,255], [-127,127], etc.
 #### No action limit
