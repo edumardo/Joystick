@@ -12,6 +12,7 @@ Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit, 
 void setup()
 {
     Serial.begin(9600);
+    joystick.invertYAxis(); // Y-axis decreases when I push forward in my hardware
 }
 
 void loop()
