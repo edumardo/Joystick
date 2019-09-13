@@ -19,17 +19,32 @@ Joystick::Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoysti
     m_noActionLimit = (((maxRange + minRange) / 2 - noActionLimit) < minRange) ? 0 : noActionLimit; // out of range check
     m_joystickLowLimit = (maxRange + minRange) / 2 - m_noActionLimit;
     m_joystickHighLimit = (maxRange + minRange) / 2 + m_noActionLimit;
+
+    m_XAxisInverted = false;
+    m_YAxisInverted = false;
 }
 
 int Joystick::getXValue()
 {
-    m_XValue = map(analogRead(m_pinJoystickX), m_minAnalogRange, m_maxAnalogRange, m_minRange, m_maxRange);
+    m_XValue = map(
+        analogRead(m_pinJoystickX),
+        m_minAnalogRange,
+        m_maxAnalogRange,
+        m_XAxisInverted ? m_maxRange : m_minRange,
+        m_XAxisInverted ? m_minRange : m_maxRange
+    );
     return m_XValue;
 }
 
 int Joystick::getYValue()
 {
-    m_YValue = map(analogRead(m_pinJoystickY), m_minAnalogRange, m_maxAnalogRange, m_minRange, m_maxRange);
+    m_YValue = map(
+        analogRead(m_pinJoystickY),
+        m_minAnalogRange,
+        m_maxAnalogRange,
+        m_YAxisInverted ? m_maxRange : m_minRange,
+        m_YAxisInverted ? m_minRange : m_maxRange
+    );
     return m_YValue;
 }
 
@@ -52,6 +67,15 @@ int Joystick::getHighLimit()
 int Joystick::getNoActionLimit()
 {
     return m_noActionLimit;
+}
+
+void Joystick::invertXAxis()
+{
+    m_XAxisInverted = !m_XAxisInverted;
+}
+void Joystick::invertYAxis()
+{
+    m_YAxisInverted = !m_YAxisInverted;
 }
 
 String Joystick::toString()
