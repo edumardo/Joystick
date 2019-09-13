@@ -5,7 +5,9 @@ int pinJoystickX = A0;
 int pinJoystickY = A1;
 int pinJoystickButton = 5;
 int noActionLimit = 25;
-Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit, 0, 255);
+int minRange = 0;
+int maxRange = 255;
+Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit, minRange, maxRange);
 
 void setup()
 {
