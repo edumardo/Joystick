@@ -6,7 +6,8 @@
 class Joystick
 {
     private:
-        const int m_joystickRange = 512;
+        const int m_minAnalogRange = 0;
+        const int m_maxAnalogRange = 1023;
         int m_joystickLowLimit;
         int m_joystickHighLimit;
         uint8_t m_pinJoystickButton;
@@ -14,11 +15,13 @@ class Joystick
         uint8_t m_pinJoystickY;
         int m_XValue;
         int m_YValue;
+        int m_minRange;
+        int m_maxRange;
         bool m_buttonValue;
         int m_noActionLimit;
 
     public:
-        Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoystickButton, int noActionLimit);
+        Joystick(uint8_t pinJoystickX, uint8_t pinJoystickY, uint8_t pinJoystickButton, int noActionLimit, int minRange, int maxRange);
         int getXValue();
         int getYValue();
         bool getbuttonValue();

@@ -4,8 +4,10 @@ const int serialDelay = 200;
 int pinJoystickX = A0;
 int pinJoystickY = A1;
 int pinJoystickButton = 5;
-int noActionLimit = 100;
-Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit);
+int noActionLimit = 25;
+int minRange = 0;
+int maxRange = 255;
+Joystick joystick(pinJoystickX, pinJoystickY, pinJoystickButton, noActionLimit, minRange, maxRange);
 
 void setup()
 {
