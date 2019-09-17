@@ -23,7 +23,7 @@ Some hardware, like I have, Y-axis decreases when I push forward. So you can con
 ## Using the library
 In [examples/testJoystickLibrary.ino](examples/testJoystickLibrary.ino) yo can see the library in action. 
 
-First, initialize a *Joystick* object with the propper pins,no action limit and map range:
+First, initialize a *Joystick* object with the proper pins,no action limit and map range:
 
 ```
     int pinJoystickX = A0;
