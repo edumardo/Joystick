@@ -28,8 +28,8 @@ int Joystick::getXValue()
 {
     m_XValue = map(
         analogRead(m_pinJoystickX),
-        m_minAnalogRange,
-        m_maxAnalogRange,
+        MINANALOGRANGE,
+        MAXANALOGRANGE,
         m_XAxisInverted ? m_maxRange : m_minRange,
         m_XAxisInverted ? m_minRange : m_maxRange
     );
@@ -40,8 +40,8 @@ int Joystick::getYValue()
 {
     m_YValue = map(
         analogRead(m_pinJoystickY),
-        m_minAnalogRange,
-        m_maxAnalogRange,
+        MINANALOGRANGE,
+        MAXANALOGRANGE,
         m_YAxisInverted ? m_maxRange : m_minRange,
         m_YAxisInverted ? m_minRange : m_maxRange
     );
