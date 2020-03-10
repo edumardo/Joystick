@@ -1,5 +1,5 @@
 # Dual-axis XY Joystick library for Arduino
-Just a simple arduino library for control dual axis joystick. Main features:
+Just a simple arduino library for control a dual axis joystick. Main features:
 - You can map outputs into a custom range through the constructor.
 - You can define a threshold to control where axis movement don´t have effect.
 - You can invert the axis values (in my hardware Y-axis decreases when I push forward the joystick).
