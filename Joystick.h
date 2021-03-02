@@ -3,9 +3,6 @@
 
 #include "Arduino.h"
 
-#define MINANALOGRANGE 0
-#define MAXANALOGRANGE 1023
-
 class Joystick
 {
     private:
