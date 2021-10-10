@@ -21,7 +21,7 @@ The library defines a threshold, called no action limit, where you can control t
 Some hardware, like I have, Y-axis decreases when I push forward. So you can control this issue inverting range values. With every invocation you reverse the axis.
 
 ## Using the library
-In [examples/testJoystickLibrary.ino](examples/testJoystickLibrary.ino) yo can see the library in action. 
+In [examples/testJoystickLibrary.ino](examples/testJoystickLibrary.ino) you can see the library in action. 
 
 First, initialize a *Joystick* object with the proper pins,no action limit and map range:
 
